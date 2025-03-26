@@ -14,7 +14,11 @@ function convertToObject(sourceString) {
       .map((line) => {
         const [key, ...value] = line.split(':');
 
-        return [key.trim(), value.join(':').trim()];
+        return [
+          key.trim(),
+          value
+            .join(':')
+            .trim()];
       }),
   );
 }
